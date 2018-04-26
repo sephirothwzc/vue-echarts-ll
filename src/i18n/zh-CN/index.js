@@ -2,7 +2,7 @@
  * @Author: 吴占超
  * @Date: 2018-04-26 13:30:38
  * @Last Modified by: 吴占超
- * @Last Modified time: 2018-04-26 17:03:52
+ * @Last Modified time: 2018-04-26 21:19:56
  */
 export default {
   // #region 主页
@@ -13,6 +13,6 @@ export default {
   i18n: '多语言',
   light: '白',
   dark: '黑',
-  appTitle: 'VueUI演示系统'
+  appTitle: '演示系统'
   // #endregion 主页end
 }
