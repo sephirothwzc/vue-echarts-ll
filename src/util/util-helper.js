@@ -2,7 +2,7 @@
  * @Author: 吴占超
  * @Date: 2018-04-26 09:39:34
  * @Last Modified by: 吴占超
- * @Last Modified time: 2018-04-26 13:51:45
+ * @Last Modified time: 2018-04-26 19:34:25
  * @document vue全局帮助类[i,localStorage]
  */
 

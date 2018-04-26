@@ -2,13 +2,13 @@
  * @Author: 吴占超
  * @Date: 2018-04-26 10:09:32
  * @Last Modified by: 吴占超
- * @Last Modified time: 2018-04-26 16:09:25
+ * @Last Modified time: 2018-04-26 19:40:17
  */
 import Vue from 'vue'
 import configSetting from '@/config'
 import VueI18n from 'vue-i18n'
 import UtilHelper from '@/util/util-helper'
-import localeList from './localeList'
+import localeList from '@/i18n/localeList'
 
 Vue.use(VueI18n)
 
