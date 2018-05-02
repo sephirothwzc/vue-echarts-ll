@@ -1,26 +1,5 @@
 <template>
   <v-app :dark="dark">
-    <!-- <v-navigation-drawer persistent :mini-variant="miniVariant" :clipped="clipped" v-model="drawer" enable-resize-watcher fixed app>
-        <div class="pa-3 text-xs-center">
-          <div class="display-2 py-4">
-            {{$t('appTitle')}}
-          </div>
-          <div style="padding-left:5em">
-            <v-switch :label="(!dark ? $t('light'): $t('dark'))" v-model="dark" hide-details></v-switch>
-          </div>
-        </div>
-        <hr class="divider">
-        <v-list>
-          <v-list-tile value="true" v-for="(item, i) in items" :key="i">
-            <v-list-tile-action>
-              <v-icon v-html="item.icon"></v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title v-text="item.title"></v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </v-list>
-      </v-navigation-drawer> -->
     <AppNavigation :mini-variant="miniVariant" :clipped="clipped" :drawer="drawer" v-on:changeDark="changeDark" v-on:changeDrawer="changeDrawer"></AppNavigation>
     <v-toolbar app :clipped-left="clipped">
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
@@ -102,7 +81,7 @@ export default {
   name: 'App',
   methods: {
     /**
-     * @description
+     * @description 更改多语言设置
      * @param {String} locale
      */
     changeLocale(locale) {

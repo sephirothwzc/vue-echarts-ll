@@ -43,10 +43,6 @@ export default {
     drawer: {
       type: Boolean,
       required: true
-    },
-    st: {
-      type: String,
-      required: true
     }
   },
   //   props: ['miniVariant', 'clipped', 'drawer'],
@@ -64,7 +60,7 @@ export default {
       items: [
         {
           icon: 'bubble_chart',
-          title: 'Inspire'
+          title: '系统设置'
         }
       ]
     }
