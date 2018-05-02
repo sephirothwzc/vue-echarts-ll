@@ -1,26 +1,27 @@
 <template>
   <v-app :dark="dark">
-    <v-navigation-drawer persistent :mini-variant="miniVariant" :clipped="clipped" v-model="drawer" enable-resize-watcher fixed app>
-      <div class="pa-3 text-xs-center">
-        <div class="display-2 py-4">
-          {{$t('appTitle')}}
+    <!-- <v-navigation-drawer persistent :mini-variant="miniVariant" :clipped="clipped" v-model="drawer" enable-resize-watcher fixed app>
+        <div class="pa-3 text-xs-center">
+          <div class="display-2 py-4">
+            {{$t('appTitle')}}
+          </div>
+          <div style="padding-left:5em">
+            <v-switch :label="(!dark ? $t('light'): $t('dark'))" v-model="dark" hide-details></v-switch>
+          </div>
         </div>
-        <div style="padding-left:5em">
-          <v-switch :label="(!dark ? $t('light'): $t('dark'))" v-model="dark" hide-details></v-switch>
-        </div>
-      </div>
-      <hr class="divider">
-      <v-list>
-        <v-list-tile value="true" v-for="(item, i) in items" :key="i">
-          <v-list-tile-action>
-            <v-icon v-html="item.icon"></v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"></v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
+        <hr class="divider">
+        <v-list>
+          <v-list-tile value="true" v-for="(item, i) in items" :key="i">
+            <v-list-tile-action>
+              <v-icon v-html="item.icon"></v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title v-text="item.title"></v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+      </v-navigation-drawer> -->
+    <AppNavigation :mini-variant="miniVariant" :clipped="clipped" :drawer="drawer" v-on:changeDark="changeDark" v-on:changeDrawer="changeDrawer"></AppNavigation>
     <v-toolbar app :clipped-left="clipped">
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-btn icon @click.stop="miniVariant = !miniVariant">
@@ -34,11 +35,6 @@
       </v-btn>
       <!-- <v-toolbar-title v-text="$t('appTitle')"></v-toolbar-title> -->
       <v-spacer></v-spacer>
-      <!-- 样式 -->
-      <!-- <v-container>
-        <v-switch :label="(!dark ? $t('light'): $t('dark'))" v-model="dark"></v-switch>
-      </v-container> -->
-      <!-- 样式end -->
       <!-- 多语言 -->
       <v-menu offset-y>
         <!-- <v-toolbar-title slot="activator"> -->
@@ -78,14 +74,21 @@
 </template>
 
 <script>
+/**
+ * write a component's description
+ */
 import localeList from '@/i18n/localeList'
-
+import AppNavigation from '@/components/layout/AppNavigation'
 export default {
+  components: {
+    AppNavigation
+  },
+  /**
+   * @description
+   * @returns {any}
+   */
   data() {
     return {
-      /**
-       * 样式控制
-       */
       dark: false,
       i18nData: localeList.language,
       clipped: false,
@@ -93,19 +96,31 @@ export default {
       fixed: false,
       right: true,
       rightDrawer: false,
-      miniVariant: false,
-      items: [
-        {
-          icon: 'bubble_chart',
-          title: 'Inspire'
-        }
-      ]
+      miniVariant: false
     }
   },
   name: 'App',
   methods: {
+    /**
+     * @description
+     * @param {String} locale
+     */
     changeLocale(locale) {
       this.$i18n.locale = locale
+    },
+    /**
+     * @description
+     * @param {Boolean} valDark
+     */
+    changeDark(valDark) {
+      this.dark = valDark
+    },
+    /**
+     * @description
+     * @param {Boolean} valDrawer
+     */
+    changeDrawer(valDrawer) {
+      this.drawer = valDrawer
     }
   }
 }

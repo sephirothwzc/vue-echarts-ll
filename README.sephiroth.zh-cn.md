@@ -48,7 +48,45 @@
    * 类名：Pascal Case(帕斯卡命名) 
    * 方法名，属性名，函数名：Camel Case（小驼峰命名）
    * 常量：全部大写，下划线分词
-   * 文件：全部小写，中横线分词
+   * 文件(js)：全部小写，中横线分词
+   * 文件(vue):Pascal Case(帕斯卡命名)
 7. 严格模式，手动声明严格模式以便配合ECMAScript 5 'use strict' 类、函数、文件等按照作用域添加
 8. 变量声明
    不允许使用提升模式声明变量（var 禁止使用）统一使用let 作用域变量均统一声明，尽量不要出现随用随写
+
+#vue约定
+1. vue方法放置顺序
+    1 components
+    2 props
+    3 data
+    4 created
+    5 mounted
+    6 activited
+    7 update
+    8 beforeRouteUpdate
+    9 metods
+    10 filter
+    11 computed
+    12 watch
+2. props 必须声明验证，指定验证格式，适当情况指定默认值
+  正例：
+  props: {
+    miniVariant: {
+      type: Boolean,
+      required: true
+    },
+    clipped: {
+      type: Boolean,
+      required: true
+    },
+    drawer: {
+      type: Boolean,
+      required: true
+    },
+    st: {
+      type: String,
+      required: true
+    }
+  }
+  反例：
+  props: ['miniVariant', 'clipped', 'drawer']
