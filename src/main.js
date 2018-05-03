@@ -52,8 +52,9 @@ new Vue({
   el: '#app',
   i18n,
   router,
-  components: { App },
-  template: '<App/>',
+  render: h => h(App),
+  // components: { App },
+  // template: '<App/>',
   created() {
     global.$t = this.$t
   }

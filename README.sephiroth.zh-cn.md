@@ -11,6 +11,7 @@
    字面量： 
    export default { id:'',get name(){...} }
    import linq from ‘xxx’
+   import 不允许使用`${xxx}`
 3. [对象]common utis 封装对象，getset，method，禁止使用function声明。
 4. [参数]声明均要求{}支持默认值
    正例：
@@ -48,7 +49,7 @@
    * 类名：Pascal Case(帕斯卡命名) 
    * 方法名，属性名，函数名：Camel Case（小驼峰命名）
    * 常量：全部大写，下划线分词
-   * 文件(js)：全部小写，中横线分词
+   * 文件(js)(文件夹)：全部小写，中横线分词
    * 文件(vue):Pascal Case(帕斯卡命名)
 7. 严格模式，手动声明严格模式以便配合ECMAScript 5 'use strict' 类、函数、文件等按照作用域添加
 8. 变量声明
@@ -90,3 +91,7 @@
   }
   反例：
   props: ['miniVariant', 'clipped', 'drawer']
+3. 嵌套路由应用场景
+  页面嵌套才会有嵌套路由，并不是url嵌套，url与路径并不一致对应，一级路由按照文件夹区分，后续路由根据页面嵌套情况设置是否嵌套
+  嵌套路由要求组件具有<router-view></router-view>
+  
