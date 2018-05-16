@@ -19,6 +19,9 @@ import {
 } from 'vuetify'
 import '../node_modules/vuetify/src/stylus/app.styl'
 import i18n from '@/i18n/index'
+import ECharts from 'vue-echarts'
+
+Vue.component('chart', ECharts)
 
 Vue.use(Vuetify, {
   components: {

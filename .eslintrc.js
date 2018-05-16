@@ -25,5 +25,8 @@ module.exports = {
     'no-trailing-spaces': 'error',
     // 不允许函数括号之间存在空格
     'space-before-function-paren': ['error', 'never'],
+    // 缩进
+    'indent':['off','tab'],
+    'func-call-spacing': ["error", "never"]
   }
 }
