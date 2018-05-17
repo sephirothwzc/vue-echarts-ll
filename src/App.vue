@@ -1,20 +1,21 @@
 <template>
-  <router-view/>
+  <v-app>
+    <router-view/>
+  </v-app>
 </template>
 
 <script>
-/**
- * write a component's description
- */
-export default {
   /**
-   * @description
-   * @returns {any}
+   * write a component's description
    */
-  data() {
-    return {
-    }
-  },
-  name: 'App'
-}
+  export default {
+    /**
+     * @description
+     * @returns {any}
+     */
+    data() {
+      return {}
+    },
+    name: 'App'
+  }
 </script>

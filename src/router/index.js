@@ -37,9 +37,22 @@ export const routes = [{
   {
     path: '/day-path',
     name: 'DayPath',
-    component: () =>
-      import('@/components/lu-lin/DayPath.vue')
+    component: () => import('@/components/lu-lin/DayPath.vue')
   }
+  // #region 嵌套路由
+  // {
+  //   path: '/lu-lin',
+  //   name: 'LuLin',
+  //   redirect: '/day-path',
+  //   component: Main,
+  //   children: [{
+  //     path: 'day-path',
+  //     name: 'DayPath',
+  //     component: () =>
+  //       import('@/components/lu-lin/DayPath.vue')
+  //   }]
+  // }
+  // #endregion 嵌套路由end
 ]
 
 export default new Router({

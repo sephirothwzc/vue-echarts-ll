@@ -15,7 +15,12 @@ import {
   VToolbar,
   transitions,
   VMenu,
-  VSwitch
+  VSwitch,
+  VTabs,
+  VCard,
+  VDatePicker,
+  VTextField,
+  VDialog
 } from 'vuetify'
 import '../node_modules/vuetify/src/stylus/app.styl'
 import i18n from '@/i18n/index'
@@ -35,7 +40,12 @@ Vue.use(Vuetify, {
     VToolbar,
     transitions,
     VMenu,
-    VSwitch
+    VSwitch,
+    VTabs,
+    VCard,
+    VDatePicker,
+    VTextField,
+    VDialog
   },
   theme: {
     primary: '#ee44aa',
@@ -56,8 +66,6 @@ new Vue({
   i18n,
   router,
   render: h => h(App),
-  // components: { App },
-  // template: '<App/>',
   created() {
     global.$t = this.$t
   }
