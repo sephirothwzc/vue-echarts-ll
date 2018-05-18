@@ -20,7 +20,8 @@ import {
   VCard,
   VDatePicker,
   VTextField,
-  VDialog
+  VDialog,
+  VSelect
 } from 'vuetify'
 import '../node_modules/vuetify/src/stylus/app.styl'
 import i18n from '@/i18n/index'
@@ -45,7 +46,8 @@ Vue.use(Vuetify, {
     VCard,
     VDatePicker,
     VTextField,
-    VDialog
+    VDialog,
+    VSelect
   },
   theme: {
     primary: '#ee44aa',

@@ -14,6 +14,11 @@ export const routes = [{
       path: 'home',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: 'multi-selection',
+      name: 'MultiSelection',
+      component: () => import('@/components/test-control/MultiSelection.vue')
     }]
   },
   {
