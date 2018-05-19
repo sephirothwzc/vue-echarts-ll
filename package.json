@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "i": "^0.3.6",
+    "material-design-icons": "^3.0.1",
     "vue": "^2.5.2",
     "vue-echarts": "^3.0.7",
     "vue-i18n": "^7.6.0",
