@@ -27,6 +27,7 @@ module.exports = {
     'space-before-function-paren': ['error', 'never'],
     // 缩进
     'indent':['off','tab'],
-    'func-call-spacing': ["error", "never"]
+    // 函数名称和调用它的左括号之间的空格
+    'func-call-spacing': ['error', 'never']
   }
 }

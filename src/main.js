@@ -26,6 +26,9 @@ import {
 import '../node_modules/vuetify/src/stylus/app.styl'
 import i18n from '@/i18n/index'
 import ECharts from 'vue-echarts'
+import '@/util/ajax-helper'
+import '@/mock/mock-helper'
+import '@/util/vue-filters'
 
 Vue.component('chart', ECharts)
 

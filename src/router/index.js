@@ -40,7 +40,7 @@ export const routes = [{
     ]
   },
   {
-    path: '/day-path',
+    path: '/day-path/:equipment',
     name: 'DayPath',
     component: () => import('@/components/lu-lin/DayPath.vue')
   }
