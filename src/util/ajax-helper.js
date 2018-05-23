@@ -1,4 +1,3 @@
-/* eslint-disable */
 /**
  * axios 帮助类
  */
@@ -44,17 +43,18 @@ axios.interceptors.response.use(
 // endregion axios filter end
 
 // region Promise.prototype.finally
-/* eslint no-extend-native: ["error", { "exceptions": ["Object"] }] */
-Promise.prototype.finally = function(callback) {
-  let P = this.constructor
-  return this.then(
-    value => P.resolve(callback()).then(() => value),
-    reason =>
-    P.resolve(callback()).then(() => {
-      throw reason
-    })
-  )
-}
+Object.defineProperty(Promise.prototype, 'finally', {
+  value: function(callback) {
+    let P = this.constructor
+    return this.then(
+      value => P.resolve(callback()).then(() => value),
+      reason =>
+      P.resolve(callback()).then(() => {
+        throw reason
+      })
+    )
+  }
+})
 // endregion Promise.prototype.finally end
 // region vue prototype settings
 Vue.prototype.$ajax = axios

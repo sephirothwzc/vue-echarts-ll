@@ -28,6 +28,8 @@ module.exports = {
     // 缩进
     'indent':['off','tab'],
     // 函数名称和调用它的左括号之间的空格
-    'func-call-spacing': ['error', 'never']
+    'func-call-spacing': ['error', 'never'],
+    // 禁止扩展原生对象
+    'no-extend-native': [0]
   }
 }
