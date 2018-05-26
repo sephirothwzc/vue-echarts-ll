@@ -26,7 +26,7 @@
                         xAxisDesc: '时间', // 报表横坐标描述
                         yAxisDesc: '功率', // 报表纵坐标描述
                         seriesType: 'line', // 图标显示类型
-                        dataUrl: 'http://111.160.78.210:10101/pv/report/device' // 数据接口地址
+                        dataUrl: 'pv/report/device' // 数据接口地址
                     },
                     {
                         chartName: '电压', // 报表名称
@@ -34,7 +34,7 @@
                         xAxisDesc: '时间', // 报表横坐标描述
                         yAxisDesc: '电压', // 报表纵坐标描述
                         seriesType: 'line', // 图标显示类型
-                        dataUrl: 'http://111.160.78.210:10101/pv/report/device' // 数据接口地址
+                        dataUrl: 'pv/report/device' // 数据接口地址
                     },
                     {
                         chartName: '温度', // 报表名称
@@ -42,7 +42,7 @@
                         xAxisDesc: '时间', // 报表横坐标描述
                         yAxisDesc: '温度', // 报表纵坐标描述
                         seriesType: 'line', // 图标显示类型
-                        dataUrl: 'http://111.160.78.210:10101/pv/report/device' // 数据接口地址
+                        dataUrl: 'pv/report/device' // 数据接口地址
                     }
                 ],
                 equipment: this.$route.params.equipment

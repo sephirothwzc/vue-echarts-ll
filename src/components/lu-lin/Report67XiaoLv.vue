@@ -24,7 +24,7 @@
                     chartType: '1', // 报表时间统计类型
                     xAxisDesc: '时间', // 报表横坐标描述
                     yAxisDesc: '收益(万元)', // 报表纵坐标描述
-                    dataUrl: 'http://111.160.78.210:10101/pv/report/installed'
+                    dataUrl: 'pv/report/installed'
                     // dataUrl: 'chartOption/getOptionByDate' // 数据接口地址
                 },
                 chartTypeMonthVal: '1', // 时间类型-月-val

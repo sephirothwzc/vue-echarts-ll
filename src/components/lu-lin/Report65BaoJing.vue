@@ -49,7 +49,7 @@
                         {x: '时间', y: '报警次数'},
                         {x: '时间', y: '故障率%'}
                     ], // 坐标轴描述
-                    dataUrl: 'http://111.160.78.210:10101/pv/report/power'
+                    dataUrl: 'pv/report/power'
                     // dataUrl: 'chartOption/getOptionByDate' // 数据接口地址
                 },
                 chartTypeMonthVal: '1', // 时间类型-月-val
