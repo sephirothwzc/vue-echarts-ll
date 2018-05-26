@@ -30,6 +30,7 @@ import '@/util/ajax-helper'
 import '@/mock/mock-helper'
 import '@/util/vue-filters'
 
+// window.onresize = ECharts.resize
 Vue.component('chart', ECharts)
 
 Vue.use(Vuetify, {

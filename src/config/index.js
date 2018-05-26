@@ -8,7 +8,7 @@ const configSetting = {
   locale: 'zh-CN',
   url: 'http://localhost:3333',
   debug: {
-    mock: true, // enable mock
+    mock: false, // enable mock
     http: false // http request log
   }
 }

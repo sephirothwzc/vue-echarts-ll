@@ -2,16 +2,20 @@
 # 编程约定
 1. [版本]全面拥抱html5、css3、es6。强制要求使用less。
 2. [模块化]本项目不使用commonjs、amd、cmd、umd规则
-   说明：使用import、export
-   *对象（推荐）：
-   export class xxx extends {...} (out name)
-   export default class xxx extends{...}(out default)
-   import {xxx} from 'xxx'(for out name)
-   import xxx from 'xxx'(for out default)
-   字面量： 
-   export default { id:'',get name(){...} }
-   import linq from ‘xxx’
-   import 不允许使用`${xxx}`
+
+    说明：使用import、export  
+    *对象（推荐）：  
+
+        export class xxx extends {...} (out name)  
+        export default class xxx extends{...}(out default)  
+        
+    import {xxx} from 'xxx'(for out name)  
+    import xxx from 'xxx'(for out default)  
+    字面量：   
+    export default { id:'',get name(){...} }  
+    import linq from ‘xxx’  
+    import 不允许使用`${xxx}`  
+
 3. [对象]common utis 封装对象，getset，method，禁止使用function声明。
 4. [参数]声明均要求{}支持默认值
    正例：

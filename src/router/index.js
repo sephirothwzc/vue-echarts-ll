@@ -40,9 +40,29 @@ export const routes = [{
     ]
   },
   {
-    path: '/day-path/:equipment',
-    name: 'DayPath',
+    path: '/day-path/:equipment/:schoolCode/:token',
+    name: '智能组件',
     component: () => import('@/components/lu-lin/DayPath.vue')
+  },
+  {
+    path: '/report61/:equipment/:schoolCode/:token',
+    name: '逆变器',
+    component: () => import('@/components/lu-lin/Report61NiBianQi.vue')
+  },
+  {
+    path: '/report64/:equipment/:schoolCode/:token',
+    name: '发电量与收益',
+    component: () => import('@/components/lu-lin/Report64ShouYi.vue')
+  },
+  {
+    path: '/report65/:equipment/:schoolCode/:token',
+    name: '报警与故障',
+    component: () => import('@/components/lu-lin/Report65BaoJing.vue')
+  },
+  {
+    path: '/report67/:equipment/:schoolCode/:token',
+    name: '效率统计',
+    component: () => import('@/components/lu-lin/Report67XiaoLv.vue')
   }
   // #region 嵌套路由
   // {
